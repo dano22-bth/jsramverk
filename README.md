@@ -52,7 +52,7 @@ To get the app to work, we used the steps outlined below.
 First we obtained an API key from Trafikverket by visitng their website, registering an account, and following the instructions there.
 
 #### Step 2: Create a .env File
-Next we created a `.env` file in the root directory of the project and added our newly acquired API key using the following format:
+Next we created a `.env` file in the `backend` directory and added our newly acquired API key using the following format:
 
 ```
 TRAFIKVERKET_API_KEY=<api-key-here>
