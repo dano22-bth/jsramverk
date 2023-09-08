@@ -1,9 +1,8 @@
 # jsramverk
 
 ## kmom01
-By running `npm audit`, we identified 11 vulnerabilities, with 3 being of moderate severity and 8 being of high severity. Each vulnerability, its severity, and the packages affected have been listed below.
-
 ### Vulnerabilities
+By running `npm audit`, we identified 11 vulnerabilities, with 3 being of moderate severity and 8 being of high severity. Each vulnerability, its severity, and the packages affected have been listed below.
 
 #### 1. debug
 - **Severity:** High
@@ -43,3 +42,41 @@ By running `npm audit`, we identified 11 vulnerabilities, with 3 being of modera
 
 ### Solution
 All issues were resolved by running `npm audit fix`, as suggested in the ouput of the intial audit. Upon running `npm audit` again, no further security vulnerabilities were detected among the installed packages.
+
+------------------------------
+
+### Steps to make the app work
+To get the app to work, we used the steps outlined below.
+
+#### Step 1: Obtain an API Key from Trafikverket
+First we obtained an API key from Trafikverket by visitng their website, registering an account, and following the instructions there.
+
+#### Step 2: Create a .env File
+Next we created a `.env` file in the root directory of the project and added our newly acquired API key using the following format:
+
+```
+TRAFIKVERKET_API_KEY=<api-key-here>
+```
+
+#### Step 3: Run the Database Reset Script
+We then moved to the `backend` folder of the project and exectued the provided script to recreate the database and perform migrations:
+
+```
+bash db/reset_db.bash
+```
+
+#### Step 4: Start Express
+We installed `nodemon` as a devDependency in the project and created an npm script to use it. We then started the Express server by running:
+
+```
+npm run dev
+```
+
+#### Step 5: Start an HTTP Server on Port 9000
+Finally, in order to serve the app, we started a python HTTP server on port 9000 by navigating to the `frontend` directory and running:
+
+```
+python3 -m http.server 9000
+```
+
+--------------------------
