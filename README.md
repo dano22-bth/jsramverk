@@ -80,3 +80,8 @@ python3 -m http.server 9000
 ```
 
 --------------------------
+
+### Framework selection
+We decided to go with the `Vue` framework.
+
+--------------------------
