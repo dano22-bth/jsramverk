@@ -79,9 +79,9 @@ Finally, in order to serve the app, we started a python HTTP server on port 9000
 python3 -m http.server 9000
 ```
 
---------------------------
+------------------------------
 
 ### Framework selection
-We decided to go with the `Vue` framework.
+We decided to go with the `Vue` framework. Our reasoning for choosing this framwork was that it seemed to be somewhat of a happy medium between the complexity of Angular and React's focus on UI. At the same time, it's more popular than Svelte and has a larger user base.
 
---------------------------
+------------------------------
