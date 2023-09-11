@@ -79,6 +79,9 @@ Finally, in order to serve the app, we started a python HTTP server on port 9000
 python3 -m http.server 9000
 ```
 
+#### Step 6: Change the Backend Port
+Christopher was not able to start the application with Express running on port 1337. After problemsolving and trying out various solutions, we decided to change the port to 1338. The application then worked fine for both of us.
+
 ------------------------------
 
 ### Framework selection
